@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "1fdab6b9-e80a-4592-934c-8d40a2cadeb4",
+		"name": "OrderController API",
+		"description": "Postman collection for OrderController",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11873188"
+	},
+	"item": [
+		{
+			"name": "Get All Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyMEJWS2RSNzFuWWNDbUJlNjZ0a0NmWUVmRVNjYXBwQkJ5MndwdHZVYk5rIn0.eyJleHAiOjE3MjU5MTQ0OTYsImlhdCI6MTcyNTg3ODQ5NiwianRpIjoiNjQ5ZWE5NzYtYjY3NS00OTU0LWIzZTEtYWFlOGFmZGZjMjU5IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgyL3JlYWxtcy9wcm9kdWN0LXNlcnZpY2UiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiYmZiZWZlYmQtOTZlOC00NWFkLTg1YWMtZDNlZGY3YzA5YzQxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoib3JkZXItc2VydmljZS1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiYzBjYmU4ZjYtZTExOC00YmY5LTkzZmQtMjMxODFkY2JhYmEzIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtcHJvZHVjdC1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJjMGNiZThmNi1lMTE4LTRiZjktOTNmZC0yMzE4MWRjYmFiYTMiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.NVHrir68v9VnRUej1TGGHWTUgjII8yEeqsJjsg6DDamRF7w3NMfiuKeJXsb0sRsY999TPOxOIpJGhk92oI4mStw_vawq1fg81sgU-DTpvplI9-HJs2dpPhzl3ww67SZt7MEF67VC6Qncsh1wRgnG8HBvrCVbMyv6kG5diZfLCW7qfzJwTy3LGFQQW10ARLz8XTOYxCpTYwqot_guCDKUPq3yKPBM-OW6l7azYBLevdMmi764wV9GFvWu2hvNWuD_3gyjGXEnIx15uod6h963hiVOteY1LjN93Rp-17NpFEYzCK-9OIaW45J0Yxrd4fzEWELEmg5CwXdx57lVfU9QTA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order-service/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order-service",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order-service/orders/{{orderId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order-service",
+						"orders",
+						"{{orderId}}"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyMEJWS2RSNzFuWWNDbUJlNjZ0a0NmWUVmRVNjYXBwQkJ5MndwdHZVYk5rIn0.eyJleHAiOjE3MjU5MTIwNDIsImlhdCI6MTcyNTg3NjA0MiwianRpIjoiZDExODIxYTItNjJhZS00N2E0LTk0Y2EtYTE5YzEzMmNiNTliIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgyL3JlYWxtcy9wcm9kdWN0LXNlcnZpY2UiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiYmZiZWZlYmQtOTZlOC00NWFkLTg1YWMtZDNlZGY3YzA5YzQxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicHJvZHVjdC1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiZWMzNWVmNzMtMzk3MS00MGI0LWFhZGUtNDlkNDAwNTI3ZjdkIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtcHJvZHVjdC1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJlYzM1ZWY3My0zOTcxLTQwYjQtYWFkZS00OWQ0MDA1MjdmN2QiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.Hhnt7UDFDZ8DulHnMG1_PZ77B4oUAqp2ksMiRSzSjfrKeIomij3207-PQSBwiJc4xGEaXdFUgKFXYITGZ3bH2qOUFM6m4PFvca9fWU8O9RAcFwbKxhlODHutuf0QsAYi0qq8wQIhlYaXMazAKJakOHvi2dOMVlsZ7lhHyqW6owKnZx1yIjg4GKqKZtN4bgCFN2NL542ZzxIh1abfE80YZOBijtFA0Z6Fo9eTykEYfqPVMlsMdtEtERVcIUOnxj3YSWsgwp-C6qPusl5-q0oDgAB8kRmvIl3up9CHo9dfcBpXQFUpWzRuGMBaGtNmkY-vc0u0hr0kNBK13HcPwN3mFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customer\": {\n    \"id\": 1\n  },\n  \"items\": [\n    {\n      \"productId\": 1,\n      \"quantity\": 2,\n      \"price\": 19.99\n    }\n  ],\n  \"status\": \"PENDING\",\n  \"orderDate\": \"2024-09-08T12:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/order-service/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order-service",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyMEJWS2RSNzFuWWNDbUJlNjZ0a0NmWUVmRVNjYXBwQkJ5MndwdHZVYk5rIn0.eyJleHAiOjE3MjU5MTIwNDIsImlhdCI6MTcyNTg3NjA0MiwianRpIjoiZDExODIxYTItNjJhZS00N2E0LTk0Y2EtYTE5YzEzMmNiNTliIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgyL3JlYWxtcy9wcm9kdWN0LXNlcnZpY2UiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiYmZiZWZlYmQtOTZlOC00NWFkLTg1YWMtZDNlZGY3YzA5YzQxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicHJvZHVjdC1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiZWMzNWVmNzMtMzk3MS00MGI0LWFhZGUtNDlkNDAwNTI3ZjdkIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtcHJvZHVjdC1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJlYzM1ZWY3My0zOTcxLTQwYjQtYWFkZS00OWQ0MDA1MjdmN2QiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.Hhnt7UDFDZ8DulHnMG1_PZ77B4oUAqp2ksMiRSzSjfrKeIomij3207-PQSBwiJc4xGEaXdFUgKFXYITGZ3bH2qOUFM6m4PFvca9fWU8O9RAcFwbKxhlODHutuf0QsAYi0qq8wQIhlYaXMazAKJakOHvi2dOMVlsZ7lhHyqW6owKnZx1yIjg4GKqKZtN4bgCFN2NL542ZzxIh1abfE80YZOBijtFA0Z6Fo9eTykEYfqPVMlsMdtEtERVcIUOnxj3YSWsgwp-C6qPusl5-q0oDgAB8kRmvIl3up9CHo9dfcBpXQFUpWzRuGMBaGtNmkY-vc0u0hr0kNBK13HcPwN3mFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customer\": {\n    \"id\": 1\n  },\n  \"items\": [\n    {\n      \"productId\": 3,\n      \"quantity\": 3,\n      \"price\": 29.99\n    }\n  ],\n  \"status\": \"PROCESSING\",\n  \"orderDate\": \"2024-09-08T12:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/order-service/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order-service",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyMEJWS2RSNzFuWWNDbUJlNjZ0a0NmWUVmRVNjYXBwQkJ5MndwdHZVYk5rIn0.eyJleHAiOjE3MjU5MTIwNDIsImlhdCI6MTcyNTg3NjA0MiwianRpIjoiZDExODIxYTItNjJhZS00N2E0LTk0Y2EtYTE5YzEzMmNiNTliIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgyL3JlYWxtcy9wcm9kdWN0LXNlcnZpY2UiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiYmZiZWZlYmQtOTZlOC00NWFkLTg1YWMtZDNlZGY3YzA5YzQxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicHJvZHVjdC1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiZWMzNWVmNzMtMzk3MS00MGI0LWFhZGUtNDlkNDAwNTI3ZjdkIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtcHJvZHVjdC1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJlYzM1ZWY3My0zOTcxLTQwYjQtYWFkZS00OWQ0MDA1MjdmN2QiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.Hhnt7UDFDZ8DulHnMG1_PZ77B4oUAqp2ksMiRSzSjfrKeIomij3207-PQSBwiJc4xGEaXdFUgKFXYITGZ3bH2qOUFM6m4PFvca9fWU8O9RAcFwbKxhlODHutuf0QsAYi0qq8wQIhlYaXMazAKJakOHvi2dOMVlsZ7lhHyqW6owKnZx1yIjg4GKqKZtN4bgCFN2NL542ZzxIh1abfE80YZOBijtFA0Z6Fo9eTykEYfqPVMlsMdtEtERVcIUOnxj3YSWsgwp-C6qPusl5-q0oDgAB8kRmvIl3up9CHo9dfcBpXQFUpWzRuGMBaGtNmkY-vc0u0hr0kNBK13HcPwN3mFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order-service/orders/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order-service",
+						"orders",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order Items",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyMEJWS2RSNzFuWWNDbUJlNjZ0a0NmWUVmRVNjYXBwQkJ5MndwdHZVYk5rIn0.eyJleHAiOjE3MjU5MTIwNDIsImlhdCI6MTcyNTg3NjA0MiwianRpIjoiZDExODIxYTItNjJhZS00N2E0LTk0Y2EtYTE5YzEzMmNiNTliIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgyL3JlYWxtcy9wcm9kdWN0LXNlcnZpY2UiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiYmZiZWZlYmQtOTZlOC00NWFkLTg1YWMtZDNlZGY3YzA5YzQxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicHJvZHVjdC1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiZWMzNWVmNzMtMzk3MS00MGI0LWFhZGUtNDlkNDAwNTI3ZjdkIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtcHJvZHVjdC1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJlYzM1ZWY3My0zOTcxLTQwYjQtYWFkZS00OWQ0MDA1MjdmN2QiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.Hhnt7UDFDZ8DulHnMG1_PZ77B4oUAqp2ksMiRSzSjfrKeIomij3207-PQSBwiJc4xGEaXdFUgKFXYITGZ3bH2qOUFM6m4PFvca9fWU8O9RAcFwbKxhlODHutuf0QsAYi0qq8wQIhlYaXMazAKJakOHvi2dOMVlsZ7lhHyqW6owKnZx1yIjg4GKqKZtN4bgCFN2NL542ZzxIh1abfE80YZOBijtFA0Z6Fo9eTykEYfqPVMlsMdtEtERVcIUOnxj3YSWsgwp-C6qPusl5-q0oDgAB8kRmvIl3up9CHo9dfcBpXQFUpWzRuGMBaGtNmkY-vc0u0hr0kNBK13HcPwN3mFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order-service/orders/2/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order-service",
+						"orders",
+						"2",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order-service/orders/{{orderId}}/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order-service",
+						"orders",
+						"{{orderId}}",
+						"history"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/realms/product-service/protocol/openid-connect/token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "order-service-client",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "iyBRpEWykEMk78EmTIuvRN5dSjRy9NJr",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8082/realms/product-service/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"realms",
+						"product-service",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

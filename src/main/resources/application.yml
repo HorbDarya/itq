@@ -1,0 +1,47 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /product-service
+spring:
+  application:
+    name: product-service
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+    enabled: true
+  reactor:
+    debug-agent:
+      enabled: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8082/realms/product-service
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8082/realms/product-service
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: product-client
+            client-secret: KyGJ6fbkxKd35UCTZd05oDBY4c6BlQEo
+            scope: openid
+logging:
+  level:
+    org.springframework.security: TRACE
+
+
